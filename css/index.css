@@ -1,0 +1,1040 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,300;0,500;0,800;0,900;1,400;1,500;1,600;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #011F3F;
+  overflow: hidden;
+}
+
+* body .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+* body .container nav {
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 20%;
+  background: #011F3F;
+
+}
+
+* body .container nav .level {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FEF2BF;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #212121;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  padding: .875rem 1.125rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+* body .container nav #solution {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+* body .container nav .level:not(:disabled):hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+* body .container nav .level:not(:disabled):hover:active {
+  -webkit-transform: scale(1.05) translateY(0.125rem);
+          transform: scale(1.05) translateY(0.125rem);
+}
+
+* body .container nav .level:focus {
+  outline: 0 solid transparent;
+}
+
+* body .container nav .level:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  -webkit-transition: border-radius;
+  transition: border-radius;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+* body .container nav .level:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+* body .container nav .level:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+* body .container nav .level:not(:disabled):active {
+  -webkit-transform: translateY(0.125rem);
+          transform: translateY(0.125rem);
+}
+
+* body .container .big_heading {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-style: normal;
+  font-size: 3.5em;
+  /* text-shadow: 5px 5px 5px rgba(14, 14, 17, 0.5); */
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 20px;
+}
+
+
+* body .container .start_button {
+  position: relative;
+  cursor: pointer;
+  width: 20%;
+  height: 25%;
+  /* background: -webkit-gradient(linear, left top, right top, from(#CFD9DF), to(#E2EBF0)); */
+  background: #FEF2BF;
+  border-radius: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 100px;
+}
+
+* body .container .start_button:hover {
+  background-color:grey;
+}
+
+* body .container .launch_board {
+  position: relative;
+  border: none;
+  width: auto;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  border: 2px solid #FEF2BF;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -45px;
+}
+
+* body .container .launch_board .cell {
+  border: none;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid grey;
+  font-family: "Saira",sans-serif;
+  font-weight: bold;
+  color: #FEF2BF;
+}
+
+* body .container .launch_board .cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+* body .container .launch_board .cell:hover {
+  background: rgba(0, 255, 0, 0.3);
+  cursor: pointer;
+}
+
+* body .container .submit {
+  display: none;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+* body .container .submit button {
+  position: relative;
+  background-color: #FEF2BF;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+          box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+* body .container .submit button:focus:not(:focus-visible):not(.focus-visible) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+* body .container .submit button:hover {
+  transform: scale(1.05);
+}
+
+* body .container .submit button:focus {
+  -webkit-box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+          box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+* body .container .submit button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+* body .container .submit button:active {
+  background-color: #298e46;
+  -webkit-box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+          box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+* body .container .number_box {
+  position: relative;
+  width: auto;
+  margin-top: 20px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+* body .container .number_box .n {
+  position: relative;
+  width: 60px;
+  background: #FEF2BF;
+  border-radius: 8px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  cursor: pointer;
+  margin: 10px;
+}
+
+* body .container .number_box .n:hover {
+  background: rgba(0, 255, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+          box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+}
+
+* body .container .number_box .n1:hover, * body .container .number_box .n2:hover, * body .container .number_box .n3:hover, * body .container .number_box .n4:hover, * body .container .number_box .n5:hover, * body .container .number_box .n6:hover, * body .container .number_box .n7:hover, * body .container .number_box .n8:hover, * body .container .number_box .n9:hover {
+  background: rgba(211, 213, 221, 0.79);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 7px 4px rgba(36, 38, 46, 0.75);
+          box-shadow: 0px 4px 7px 4px rgba(36, 38, 46, 0.75);
+}
+
+* body .container .game_end_display {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body .container .game_end_display .winning_congrats {
+  font-family: 'Roboto','Courier New', Courier, monospace;
+  font-size: 6em;
+  letter-spacing: 4px;
+  color: green;
+  text-transform: uppercase;
+}
+
+* body .container .game_end_display .winning_msg {
+  font-family: 'Roboto','Courier New', Courier, monospace;
+  font-size: 4em;
+  color: black;
+}
+
+* body .container .game_end_display .greeting_img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 55%;
+    width: 100%;
+    height: 100%;
+    background-color: #011F3F;
+  }
+  body .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: 20%;
+    background: #011F3F;
+  }
+  body .container nav .level {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #FEF2BF;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .125rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,Helvetica,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    padding: .875rem 1.125rem;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1);
+            transform: translateZ(0) scale(1);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  body .container nav #solution {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body .container nav .level:not(:disabled):hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  body .container nav .level:not(:disabled):hover:active {
+    -webkit-transform: scale(1.05) translateY(0.125rem);
+            transform: scale(1.05) translateY(0.125rem);
+  }
+  body .container nav .level:focus {
+    outline: 0 solid transparent;
+  }
+  body .container nav .level:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    -webkit-transition: border-radius;
+    transition: border-radius;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body .container nav .level:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+  body .container nav .level:focus:not(:focus-visible):before {
+    border-width: 0;
+  }
+  body .container nav .level:not(:disabled):active {
+    -webkit-transform: translateY(0.125rem);
+            transform: translateY(0.125rem);
+  }
+  body .container .big_heading {
+    color: #FEF2BF;
+    font-family: 'Press Start 2P', cursive;
+  font-style: normal;
+    font-size: 10em;
+    letter-spacing: 7px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  body .container .start_button {
+    position: relative;
+    cursor: pointer;
+    width: 20%;
+    height: 30%;
+    border-radius: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    color: #000;
+    margin-bottom: 100px;
+    padding: 10px;
+  }
+  body .container .start_button:hover {
+    background-color: grey;
+  }
+  body .container .launch_board {
+    position: relative;
+    border: none;
+    width: auto;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    border: 2px solid grey;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: -30px;
+    margin-bottom: 80px;
+  }
+  body .container .launch_board .cell {
+    border: none;
+    width: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid grey;
+    font-family: "Saira",sans-serif;
+    font-weight: bold;
+    color: #FEF2BF;
+    font-size: 2em;
+  }
+  body .container .launch_board .cell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  body .container .launch_board .cell:hover {
+    background: rgba(0, 255, 0, 0.3);
+    cursor: pointer;
+  }
+  body .container .submit {
+    display: none;
+    position: relative;
+    margin-top: -50px;
+    width: auto;
+    height: auto;
+  }
+  body .container .submit button {
+    position: relative;
+    background-color: #FEF2BF;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+            box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  body .container .submit button:focus:not(:focus-visible):not(.focus-visible) {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+  }
+  body .container .submit button:hover {
+    transform: scale(1.05);
+  }
+  body .container .submit button:focus {
+    -webkit-box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+            box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+    outline: none;
+  }
+  body .container .submit button:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: default;
+  }
+  body .container .submit button:active {
+    background-color: #298e46;
+    -webkit-box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+            box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+  }
+  body .container .number_box {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .number_box .n {
+    position: relative;
+    width: 60px;
+    background: #FEF2BF;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #000000;
+    cursor: pointer;
+    margin: 10px;
+  }
+  body .container .number_box .n:hover {
+    background: rgba(0, 255, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+            box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+  }
+  body .container .number_box .n1:hover, body .container .number_box .n2:hover, body .container .number_box .n3:hover, body .container .number_box .n4:hover, body .container .number_box .n5:hover, body .container .number_box .n6:hover, body .container .number_box .n7:hover, body .container .number_box .n8:hover, body .container .number_box .n9:hover {
+    background: rgba(211, 213, 221, 0.79);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 7px 4px rgba(36, 38, 46, 0.75);
+            box-shadow: 0px 4px 7px 4px rgba(36, 38, 46, 0.75);
+  }
+  body .container .game_end_display {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .game_end_display .winning_congrats {
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-size: 6em;
+    letter-spacing: 4px;
+    color: green;
+    text-transform: uppercase;
+  }
+  body .container .game_end_display .winning_msg {
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-size: 4em;
+    color: black;
+  }
+  body .container .game_end_display .greeting_img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  body {
+    font-size: 40%;
+    background-color: #011F3F;
+  }
+  body .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: 20%;
+    background: #011F3F;
+  }
+  body .container nav .level {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #FEF2BF;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .125rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,Helvetica,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    padding: .875rem 1.125rem;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1);
+            transform: translateZ(0) scale(1);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  body .container nav #solution {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body .container nav .level:not(:disabled):hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  body .container nav .level:not(:disabled):hover:active {
+    -webkit-transform: scale(1.05) translateY(0.125rem);
+            transform: scale(1.05) translateY(0.125rem);
+  }
+  body .container nav .level:focus {
+    outline: 0 solid transparent;
+  }
+  body .container nav .level:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1*.375rem);
+    -webkit-transition: border-radius;
+    transition: border-radius;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body .container nav .level:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+  body .container nav .level:focus:not(:focus-visible):before {
+    border-width: 0;
+  }
+  body .container nav .level:not(:disabled):active {
+    -webkit-transform: translateY(0.125rem);
+            transform: translateY(0.125rem);
+  }
+  body .container .big_heading {
+    color: #FEF2BF;
+    font-family: 'Press Start 2P', cursive;
+  font-style: normal;
+    font-size: 10em;
+    letter-spacing: 7px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+  }
+  body .container .start_button {
+    position: relative;
+    cursor: pointer;
+    width: 20%;
+    height: 30%;
+    background: -webkit-gradient(linear, left top, right top, from(#CFD9DF), to(#E2EBF0));
+    background: #FEF2BF;
+    border-radius: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 100px;
+    padding: 10px;
+  }
+  body .container .start_button:hover {
+    background-color: grey;
+  
+  }
+  body .container .launch_board {
+    position: relative;
+    border: none;
+    width: auto;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    border: 2px solid #FEF2BF;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  body .container .launch_board .cell {
+    border: none;
+    width: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid grey;
+    font-family: "Saira",sans-serif;
+    font-weight: bold;
+    color: #FEF2BF;
+  }
+  body .container .launch_board .cell:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  body .container .launch_board .cell:hover {
+    background: rgba(0, 255, 0, 0.3);
+    cursor: pointer;
+  }
+  body .container .submit {
+    display: none;
+    position: relative;
+    margin-top: -50px;
+    width: auto;
+    height: auto;
+  }
+  body .container .submit button {
+    position: relative;
+    background-color: #FEF2BF;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+            box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 2.5em;
+    font-weight: 600;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  body .container .submit button:focus:not(:focus-visible):not(.focus-visible) {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+  }
+  body .container .submit button:hover {
+    transform: scale(1.05);
+  }
+  body .container .submit button:focus {
+    -webkit-box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+            box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+    outline: none;
+  }
+  body .container .submit button:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: default;
+  }
+  body .container .submit button:active {
+    background-color: #298e46;
+    -webkit-box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+            box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+  }
+  body .container .number_box {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .number_box .n {
+    position: relative;
+    width: 60px;
+    background: #FEF2BF;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #000000;
+    cursor: pointer;
+    margin: 10px;
+  }
+  body .container .number_box .n:hover {
+    background: rgba(0, 255, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+            box-shadow: 0px 0px 7px 4px rgba(55, 56, 56, 0.25);
+  }
+  body .container .game_end_display {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container .game_end_display .winning_congrats {
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-size: 6em;
+    letter-spacing: 4px;
+    color: green;
+    text-transform: uppercase;
+  }
+  body .container .game_end_display .winning_msg {
+    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-size: 4em;
+    color: black;
+  }
+  body .container .game_end_display .greeting_img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/string.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="icon" sizes="128x128" href="../img/string/icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Typing Test</h1>
+        <div class="inbuild_cont">Typing and read receipts make a lot of sense for messaging. You write a letter, you put it in an envelope, you send it to a friend, and you want to know when they get it. It's like FedEx - they let you know when the package gets dropped off.</div>
+        <div class="input_field">
+            <input id="textfiled" type="text" autocomplete="off">
+            <div class="timer">00:00</div>
+        </div>
+        <div class="button" onclick="game_init()">
+            Start
+        </div>
+        <div class="result_cont">
+            <div class="heading">
+                Result
+            </div>
+            <ul>
+                <li class="wpm">WPM<h1 id="wpm">0</h1></li>
+                <hr>
+                <li>Currect Word<h1 id="result_currect_word">0</h1></li>
+                <hr>
+                <li>Wrong Word<h1 id="result_wrong_word">0</h1></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../js/string.js"></script>
+</html>

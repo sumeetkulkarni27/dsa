@@ -11,7 +11,7 @@ body{
   scroll-behavior: smooth;
 }
 h1{
-  color:#fff;
+  color:gray;
 }
 
 a{
@@ -41,7 +41,7 @@ a{
   font-family: 'Alfa Slab One', cursive;
   position: relative;
   display: inline-block;
-  color: #fff;
+  color: #FEF2BF;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
